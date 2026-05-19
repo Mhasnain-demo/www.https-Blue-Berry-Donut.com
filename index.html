@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue Berry Donut Co. — Fresh Donuts & Artisan Coffee · Islamabad</title>
-<meta name="description" content="Premium handcrafted blueberry donuts and artisan coffee. Order fresh, delivered to your door. Blue Berry Donut Co., Islamabad.">
+<title>Blue Berry Donut Co. — Fresh Donuts & Artisan Coffee · Jhang</title>
+<meta name="description" content="Premium handcrafted blueberry donuts and artisan coffee. Order fresh, delivered to your door. Blue Berry Donut Co., Jhang.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 <style>
@@ -865,6 +865,42 @@ body::before {
 }
 .eta-pill strong { color:var(--sage); }
 
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ADMIN PANEL / LOCAL DATABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#admin { background: var(--parchment); }
+.admin-wrap {
+  display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:start;
+}
+.admin-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--r-xl);
+  box-shadow:var(--shadow-lg); padding:28px; overflow:hidden;
+}
+.admin-title { font-family:var(--font-display); font-size:1.45rem; font-weight:700; margin-bottom:16px; }
+.admin-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:18px; }
+.admin-stat { background:var(--parchment); border:1px solid var(--border); border-radius:var(--r-md); padding:14px; }
+.admin-stat strong { display:block; font-size:1.35rem; color:var(--violet); }
+.admin-stat span { font-size:.72rem; color:var(--text-2); text-transform:uppercase; letter-spacing:.06em; }
+.admin-tools { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 18px; }
+.admin-btn {
+  padding:10px 14px; border-radius:var(--r-sm); background:var(--violet); color:#fff;
+  font-size:.82rem; font-weight:700; box-shadow:0 4px 16px rgba(74,43,219,.22);
+}
+.admin-btn.light { background:var(--parchment); color:var(--violet); border:1px solid var(--border-2); box-shadow:none; }
+.admin-table-wrap { max-height:380px; overflow:auto; border:1px solid var(--border); border-radius:var(--r-md); }
+.admin-table { width:100%; border-collapse:collapse; font-size:.78rem; }
+.admin-table th, .admin-table td { padding:10px 12px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; }
+.admin-table th { position:sticky; top:0; background:var(--surface); color:var(--violet); z-index:1; }
+.admin-table tr:last-child td { border-bottom:none; }
+.admin-form .fg label { color:var(--text-2); }
+.admin-form .fg input, .admin-form .fg select, .admin-form .fg textarea {
+  background:var(--parchment); border-color:var(--border-2); color:var(--text);
+}
+.admin-note { font-size:.78rem; color:var(--text-2); line-height:1.6; margin-top:12px; }
+@media(max-width:900px){ .admin-wrap { grid-template-columns:1fr; } .admin-stats{ grid-template-columns:1fr; } }
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    CONTACT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -1198,6 +1234,7 @@ footer {
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#recipes">Recipes</a></li>
     <li><a href="#order">Order</a></li>
+    <li><a href="#admin">Admin</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -1217,6 +1254,7 @@ footer {
   <a href="#gallery" onclick="closeMob()">🖼️ Gallery</a>
   <a href="#recipes" onclick="closeMob()">📖 Recipes</a>
   <a href="#order"   onclick="closeMob()">🛒 Order Now</a>
+  <a href="#admin"   onclick="closeMob()">🧾 Admin Panel</a>
   <a href="#contact" onclick="closeMob()">📞 Contact</a>
 </nav>
 
@@ -1231,7 +1269,7 @@ footer {
     <div class="hero-left">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot">🫐</div>
-        Handcrafted · Islamabad, Pakistan · Est. 2018
+        Handcrafted · Jhang, Pakistan · Est. 2018
       </div>
       <h1 class="hero-h1">
         Fresh <em>Blue Berry</em>
@@ -1281,7 +1319,7 @@ footer {
     <div class="section-head sr">
       <div class="sh-tag"><div class="sh-tag-dot">🍩</div> Our Specialties</div>
       <h2 class="sh-title">Handcrafted <em>Donuts</em></h2>
-      <p class="sh-desc">Each donut is shaped, glazed and decorated by hand — using recipes perfected over five years in our Islamabad kitchen.</p>
+      <p class="sh-desc">Each donut is shaped, glazed and decorated by hand — using recipes perfected over five years in our Jhang kitchen.</p>
     </div>
 
     <div class="filter-bar sr d1">
@@ -1321,11 +1359,11 @@ footer {
     <div class="sr d2">
       <div class="about-tag">Our Story</div>
       <h2 class="about-title">Baked with Passion, <em>Served with Soul</em></h2>
-      <p class="about-body">Founded in 2018 in the heart of Islamabad, Blue Berry Donut Co. started as a humble kitchen experiment with wild-foraged blueberries and a grandmother's yeast dough recipe. Today, thousands of customers trust us for their morning ritual — because every donut tells a story of craft, love, and local community.</p>
+      <p class="about-body">Founded in 2018 in the heart of Jhang, Blue Berry Donut Co. started as a humble kitchen experiment with wild-foraged blueberries and a grandmother's yeast dough recipe. Today, thousands of customers trust us for their morning ritual — because every donut tells a story of craft, love, and local community.</p>
       <div class="about-pillars">
         <div class="about-pillar"><div class="pillar-icon">🌅</div><div class="pillar-text"><h4>Baked Fresh Daily</h4><p>Every batch leaves the oven by 6 AM — never frozen, never yesterday's.</p></div></div>
         <div class="about-pillar"><div class="pillar-icon">🌿</div><div class="pillar-text"><h4>Natural Ingredients</h4><p>Organic flour, local dairy, real fruit — zero artificial flavors.</p></div></div>
-        <div class="about-pillar"><div class="pillar-icon">🚀</div><div class="pillar-text"><h4>45-Min Delivery</h4><p>Hot and fresh to your door across Islamabad & Rawalpindi.</p></div></div>
+        <div class="about-pillar"><div class="pillar-icon">🚀</div><div class="pillar-text"><h4>45-Min Delivery</h4><p>Hot and fresh to your door across Jhang.</p></div></div>
       </div>
     </div>
   </div>
@@ -1384,10 +1422,10 @@ footer {
           <div class="fg"><label>Last Name</label><input type="text" id="lname" placeholder="Khan"></div>
         </div>
         <div class="fg"><label>Phone Number</label><input type="tel" id="phone" placeholder="+92 300 123 4567"></div>
-        <div class="fg"><label>Street Address</label><input type="text" id="address" placeholder="House 12, Street 5, F-6/3"></div>
+        <div class="fg"><label>Street Address</label><input type="text" id="address" value="Civil Lines" placeholder="Civil Lines"></div>
         <div class="form-row2">
-          <div class="fg"><label>City</label><select id="city"><option>Islamabad</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option></select></div>
-          <div class="fg"><label>ZIP Code</label><input type="text" id="zip" placeholder="44000"></div>
+          <div class="fg"><label>City</label><select id="city"><option selected>Jhang</option><option>Lahore</option><option>Faisalabad</option><option>Islamabad</option><option>Karachi</option></select></div>
+          <div class="fg"><label>ZIP Code</label><input type="text" id="zip" placeholder="35200"></div>
         </div>
         <div class="fg"><label>Delivery Instructions</label><textarea id="notes" rows="2" placeholder="Leave at door, ring twice…"></textarea></div>
 
@@ -1419,6 +1457,53 @@ footer {
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════ ADMIN PANEL -->
+<section id="admin" class="section">
+  <div class="section-inner">
+    <div class="section-head sr">
+      <div class="sh-tag"><div class="sh-tag-dot">🧾</div> Local Database</div>
+      <h2 class="sh-title">Admin <em>Panel</em></h2>
+      <p class="sh-desc">Check all placed orders by day and month, print receipts, and add more products without changing the website structure.</p>
+    </div>
+    <div class="admin-wrap">
+      <div class="admin-card sr">
+        <div class="admin-title">📊 Orders Dashboard</div>
+        <div class="admin-stats">
+          <div class="admin-stat"><strong id="adminTodayOrders">0</strong><span>Today Orders</span></div>
+          <div class="admin-stat"><strong id="adminMonthOrders">0</strong><span>This Month</span></div>
+          <div class="admin-stat"><strong id="adminMonthSales">PKR 0</strong><span>Monthly Sales</span></div>
+        </div>
+        <div class="form-row2 admin-form">
+          <div class="fg"><label>Filter by Day</label><input type="date" id="adminDay" onchange="renderAdmin()"></div>
+          <div class="fg"><label>Filter by Month</label><input type="month" id="adminMonth" onchange="renderAdmin()"></div>
+        </div>
+        <div class="admin-tools">
+          <button class="admin-btn" onclick="renderAdmin()">Refresh</button>
+          <button class="admin-btn light" onclick="printAdminReport()">🖨 Print Report</button>
+          <button class="admin-btn light" onclick="clearOrdersDB()">Clear Orders</button>
+        </div>
+        <div class="admin-table-wrap"><table class="admin-table" id="ordersTable"></table></div>
+        <p class="admin-note">Database is saved in your browser using localStorage. On real hosting, connect this same flow with MongoDB/Firebase for online admin access.</p>
+      </div>
+      <div class="admin-card sr d2">
+        <div class="admin-title">➕ Add New Product</div>
+        <div class="admin-form">
+          <div class="fg"><label>Product Name</label><input type="text" id="newPName" placeholder="Lotus Blueberry Donut"></div>
+          <div class="form-row2">
+            <div class="fg"><label>Category</label><select id="newPCat"><option>blueberry</option><option>chocolate</option><option>fruity</option><option>classic</option></select></div>
+            <div class="fg"><label>Price PKR</label><input type="number" id="newPPrice" placeholder="899"></div>
+          </div>
+          <div class="fg"><label>Image URL</label><input type="url" id="newPImg" placeholder="https://images.unsplash.com/..."></div>
+          <button class="place-order-btn" onclick="addNewProductFromAdmin()">Add Product to Menu</button>
+        </div>
+        <div class="admin-tools"><button class="admin-btn light" onclick="resetAddedProducts()">Reset Added Products</button></div>
+        <div class="admin-table-wrap"><table class="admin-table" id="productsTable"></table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════ CONTACT -->
 <section id="contact" class="section" style="background:var(--bg)">
   <div class="section-inner">
@@ -1430,11 +1515,11 @@ footer {
     <div class="contact-grid">
       <!-- Info -->
       <div class="sr">
-        <h3 class="contact-head">Visit Us in <em>Islamabad</em></h3>
-        <p class="contact-lead">We're located on Melody Food Street in F-6. Pop in for a fresh donut and a warm cup, or order online for home delivery across the twin cities.</p>
+        <h3 class="contact-head">Visit Us in <em>Jhang</em></h3>
+        <p class="contact-lead">We're located in Civil Lines, Jhang. Pop in for a fresh donut and a warm cup, or order online for home delivery across Jhang.</p>
         <div class="contact-details">
-          <div class="cd"><div class="cd-icon">📍</div><div class="cd-text"><strong>Address</strong><span>Shop 4, Melody Food Street, F-6/3, Islamabad, Pakistan 44000</span></div></div>
-          <div class="cd"><div class="cd-icon">📞</div><div class="cd-text"><strong>Phone</strong><span>+92 51 234 5678 &nbsp;·&nbsp; +92 300 987 6543</span></div></div>
+          <div class="cd"><div class="cd-icon">📍</div><div class="cd-text"><strong>Address</strong><span>Civil Lines, Jhang, Pakistan</span></div></div>
+          <div class="cd"><div class="cd-icon">📞</div><div class="cd-text"><strong>Phone</strong><span>+92 47 234 5678 &nbsp;·&nbsp; +92 300 987 6543</span></div></div>
           <div class="cd"><div class="cd-icon">✉️</div><div class="cd-text"><strong>Email</strong><span>hello@blueberrydonut.pk</span></div></div>
           <div class="cd">
             <div class="cd-icon">🕐</div>
@@ -1455,7 +1540,7 @@ footer {
           <a href="#" class="social-btn s-pt" title="Pinterest">📌</a>
         </div>
         <div class="map-frame">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106255.2!2d73.0!3d33.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6789f3c1cb679174!2sIslamabad!5e0!3m2!1sen!2spk!4v1716000000000" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps?q=Civil%20Lines%20Jhang%20Pakistan&output=embed" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
       <!-- Form -->
@@ -1480,7 +1565,7 @@ footer {
   <div class="footer-main">
     <div>
       <div class="footer-logo">🫐 Blue<span>Berry</span> Donut</div>
-      <p class="footer-about">Handcrafted donuts and artisan coffee made with love in Islamabad. Delivering happiness, one donut at a time since 2018.</p>
+      <p class="footer-about">Handcrafted donuts and artisan coffee made with love in Islamabad. Delivering happiness in Jhang, one donut at a time since 2018.</p>
       <div class="nl-form">
         <input type="email" placeholder="Your email for updates & offers">
         <button onclick="subscribe()">Subscribe</button>
@@ -1495,6 +1580,7 @@ footer {
         <li><a href="#gallery">🖼️ Gallery</a></li>
         <li><a href="#recipes">📖 Recipes</a></li>
         <li><a href="#order">🛒 Order</a></li>
+        <li><a href="#admin">🧾 Admin Panel</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1511,8 +1597,8 @@ footer {
     <div class="footer-col">
       <h4>Connect</h4>
       <ul class="footer-links">
-        <li><a href="#">📍 F-6/3, Islamabad, 44000</a></li>
-        <li><a href="#">📞 +92 51 234 5678</a></li>
+        <li><a href="#">📍 Civil Lines, Jhang</a></li>
+        <li><a href="#">📞 +92 47 234 5678</a></li>
         <li><a href="#">✉️ hello@blueberrydonut.pk</a></li>
         <li><a href="#">📘 Facebook</a></li>
         <li><a href="#">📸 Instagram</a></li>
@@ -1522,7 +1608,7 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Blue Berry Donut Co. · All rights reserved · Made with 💙 in Islamabad</p>
+    <p>© 2025 Blue Berry Donut Co. · All rights reserved · Made with 💙 in Jhang</p>
     <div class="footer-soc">
       <a href="#" title="Facebook">📘</a>
       <a href="#" title="Instagram">📸</a>
@@ -1557,6 +1643,7 @@ footer {
     <div class="os-icon">🎉</div>
     <div class="os-title">Order Placed!</div>
     <p class="os-msg">Your fresh donuts are on their way! Estimated delivery: <strong>35–45 minutes</strong>. You'll get a confirmation on WhatsApp shortly.</p>
+    <button class="os-close" onclick="printOrderDetails()" style="margin-bottom:10px">🖨 Print Order Details</button>
     <button class="os-close" onclick="document.getElementById('order-success').classList.remove('show')">Continue Browsing</button>
   </div>
 </div>
@@ -1577,12 +1664,56 @@ footer {
 <script>
 /* ── DATA ── */
 const DONUTS = [
-  { id:'d1', name:'Blueberry Glazed Dream', cat:'blueberry', price:850, oldPrice:999, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:248, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop' },
-  { id:'d2', name:'Double Chocolate Bliss', cat:'chocolate', price:799, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:312, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop' },
-  { id:'d3', name:'Strawberry Cloud Ring',  cat:'fruity',    price:749, badge:'badge-new', badgeText:'New', stars:4, reviews:189, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop' },
-  { id:'d4', name:'Oreo Crunch Delight',    cat:'classic',   price:899, badge:'',          badgeText:'',    stars:5, reviews:276, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop' },
-  { id:'d5', name:'Mini Donut Dozen Box',   cat:'classic',   price:2499,oldPrice:3199, badge:'badge-sale', badgeText:'Party', stars:5, reviews:402, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop' },
-  { id:'d6', name:'Blueberry Frosted Ring', cat:'blueberry', price:849, badge:'badge-new', badgeText:'Limited',stars:5, reviews:155, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop' },
+  { id:'d1', name:'Blueberry Glazed Dream', cat:'blueberry', price:850, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:137, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&sig=1' },
+  { id:'d2', name:'Double Chocolate Bliss', cat:'chocolate', price:799, badge:'badge-new', badgeText:'New', stars:5, reviews:154, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop&sig=2' },
+  { id:'d3', name:'Strawberry Cloud Ring', cat:'fruity', price:749, badge:'', badgeText:'', stars:5, reviews:171, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&sig=3' },
+  { id:'d4', name:'Oreo Crunch Delight', cat:'classic', price:899, badge:'badge-sale', badgeText:'Special', stars:5, reviews:188, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop&sig=4' },
+  { id:'d5', name:'Mini Donut Dozen Box', cat:'classic', price:2499, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:205, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop&sig=5' },
+  { id:'d6', name:'Blueberry Frosted Ring', cat:'blueberry', price:849, badge:'badge-hot', badgeText:'Hot', stars:4, reviews:222, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop&sig=6' },
+  { id:'d7', name:'Classic Sugar Ring', cat:'classic', price:499, oldPrice:649, badge:'badge-new', badgeText:'New', stars:5, reviews:239, img:'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&sig=7' },
+  { id:'d8', name:'Chocolate Sprinkle Pop', cat:'chocolate', price:699, badge:'', badgeText:'', stars:5, reviews:256, img:'https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&auto=format&fit=crop&sig=8' },
+  { id:'d9', name:'Mango Cream Donut', cat:'fruity', price:760, badge:'badge-sale', badgeText:'Special', stars:5, reviews:273, img:'https://images.unsplash.com/photo-1514517220034-865fb7bdce9a?w=600&auto=format&fit=crop&sig=9' },
+  { id:'d10', name:'Vanilla Bean Glaze', cat:'classic', price:650, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:290, img:'https://images.unsplash.com/photo-1556913396-7a3c459ef68e?w=600&auto=format&fit=crop&sig=10' },
+  { id:'d11', name:'Blueberry Cheesecake Donut', cat:'blueberry', price:920, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:307, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&sig=11' },
+  { id:'d12', name:'Nutella Filled Donut', cat:'chocolate', price:950, badge:'badge-new', badgeText:'New', stars:4, reviews:324, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop&sig=12' },
+  { id:'d13', name:'Raspberry Jam Bomb', cat:'fruity', price:780, badge:'', badgeText:'', stars:5, reviews:341, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&sig=13' },
+  { id:'d14', name:'Cinnamon Sugar Twist', cat:'classic', price:580, oldPrice:730, badge:'badge-sale', badgeText:'Special', stars:5, reviews:358, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop&sig=14' },
+  { id:'d15', name:'White Chocolate Blueberry', cat:'blueberry', price:990, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:375, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop&sig=15' },
+  { id:'d16', name:'Dark Cocoa Ring', cat:'chocolate', price:820, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:392, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop&sig=16' },
+  { id:'d17', name:'Pineapple Glazed Ring', cat:'fruity', price:730, badge:'badge-new', badgeText:'New', stars:5, reviews:409, img:'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&sig=17' },
+  { id:'d18', name:'Honey Butter Donut', cat:'classic', price:640, badge:'', badgeText:'', stars:4, reviews:426, img:'https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&auto=format&fit=crop&sig=18' },
+  { id:'d19', name:'Blueberry Crumble Donut', cat:'blueberry', price:940, badge:'badge-sale', badgeText:'Special', stars:5, reviews:443, img:'https://images.unsplash.com/photo-1514517220034-865fb7bdce9a?w=600&auto=format&fit=crop&sig=19' },
+  { id:'d20', name:'Chocolate Lava Filled', cat:'chocolate', price:980, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:460, img:'https://images.unsplash.com/photo-1556913396-7a3c459ef68e?w=600&auto=format&fit=crop&sig=20' },
+  { id:'d21', name:'Kiwi Fruit Glaze', cat:'fruity', price:760, oldPrice:910, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:477, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&sig=21' },
+  { id:'d22', name:'Plain Glazed Original', cat:'classic', price:520, badge:'badge-new', badgeText:'New', stars:5, reviews:494, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop&sig=22' },
+  { id:'d23', name:'Blueberry Velvet Donut', cat:'blueberry', price:930, badge:'', badgeText:'', stars:5, reviews:511, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&sig=23' },
+  { id:'d24', name:'Chocolate Almond Crunch', cat:'chocolate', price:910, badge:'badge-sale', badgeText:'Special', stars:4, reviews:528, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop&sig=24' },
+  { id:'d25', name:'Apple Caramel Donut', cat:'fruity', price:840, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:545, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop&sig=25' },
+  { id:'d26', name:'Boston Cream Classic', cat:'classic', price:890, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:562, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop&sig=26' },
+  { id:'d27', name:'Blueberry Lemon Zest', cat:'blueberry', price:870, badge:'badge-new', badgeText:'New', stars:5, reviews:579, img:'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&sig=27' },
+  { id:'d28', name:'Mocha Chocolate Donut', cat:'chocolate', price:860, oldPrice:1010, badge:'', badgeText:'', stars:5, reviews:596, img:'https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&auto=format&fit=crop&sig=28' },
+  { id:'d29', name:'Peach Cream Ring', cat:'fruity', price:790, badge:'badge-sale', badgeText:'Special', stars:5, reviews:613, img:'https://images.unsplash.com/photo-1514517220034-865fb7bdce9a?w=600&auto=format&fit=crop&sig=29' },
+  { id:'d30', name:'Maple Glazed Donut', cat:'classic', price:710, badge:'badge-hit', badgeText:'Bestseller', stars:4, reviews:630, img:'https://images.unsplash.com/photo-1556913396-7a3c459ef68e?w=600&auto=format&fit=crop&sig=30' },
+  { id:'d31', name:'Blueberry Coconut Snow', cat:'blueberry', price:900, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:647, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&sig=31' },
+  { id:'d32', name:'Triple Chocolate Ring', cat:'chocolate', price:999, badge:'badge-new', badgeText:'New', stars:5, reviews:664, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop&sig=32' },
+  { id:'d33', name:'Watermelon Candy Donut', cat:'fruity', price:760, badge:'', badgeText:'', stars:5, reviews:681, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&sig=33' },
+  { id:'d34', name:'Lotus Biscoff Donut', cat:'classic', price:930, badge:'badge-sale', badgeText:'Special', stars:5, reviews:698, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop&sig=34' },
+  { id:'d35', name:'Blueberry Jam Filled', cat:'blueberry', price:880, oldPrice:1030, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:715, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop&sig=35' },
+  { id:'d36', name:'Chocolate Peanut Butter', cat:'chocolate', price:970, badge:'badge-hot', badgeText:'Hot', stars:4, reviews:732, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop&sig=36' },
+  { id:'d37', name:'Orange Glazed Donut', cat:'fruity', price:740, badge:'badge-new', badgeText:'New', stars:5, reviews:749, img:'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&sig=37' },
+  { id:'d38', name:'Caramel Cream Donut', cat:'classic', price:850, badge:'', badgeText:'', stars:5, reviews:766, img:'https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&auto=format&fit=crop&sig=38' },
+  { id:'d39', name:'Blueberry Galaxy Donut', cat:'blueberry', price:960, badge:'badge-sale', badgeText:'Special', stars:5, reviews:783, img:'https://images.unsplash.com/photo-1514517220034-865fb7bdce9a?w=600&auto=format&fit=crop&sig=39' },
+  { id:'d40', name:'Chocolate Hazelnut Ring', cat:'chocolate', price:940, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:800, img:'https://images.unsplash.com/photo-1556913396-7a3c459ef68e?w=600&auto=format&fit=crop&sig=40' },
+  { id:'d41', name:'Cherry Berry Donut', cat:'fruity', price:780, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:817, img:'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&sig=41' },
+  { id:'d42', name:'Powdered Sugar Donut', cat:'classic', price:560, oldPrice:710, badge:'badge-new', badgeText:'New', stars:4, reviews:834, img:'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&auto=format&fit=crop&sig=42' },
+  { id:'d43', name:'Blueberry Pistachio', cat:'blueberry', price:990, badge:'', badgeText:'', stars:5, reviews:851, img:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop&sig=43' },
+  { id:'d44', name:'Chocolate Mint Donut', cat:'chocolate', price:850, badge:'badge-sale', badgeText:'Special', stars:5, reviews:868, img:'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=600&auto=format&fit=crop&sig=44' },
+  { id:'d45', name:'Banana Cream Donut', cat:'fruity', price:800, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:885, img:'https://images.unsplash.com/photo-1558303957-a0444ece7bb8?w=600&auto=format&fit=crop&sig=45' },
+  { id:'d46', name:'Red Velvet Donut', cat:'classic', price:920, badge:'badge-hot', badgeText:'Hot', stars:5, reviews:902, img:'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&auto=format&fit=crop&sig=46' },
+  { id:'d47', name:'Blueberry Honey Dip', cat:'blueberry', price:860, badge:'badge-new', badgeText:'New', stars:5, reviews:919, img:'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&sig=47' },
+  { id:'d48', name:'Fudge Brownie Donut', cat:'chocolate', price:980, badge:'', badgeText:'', stars:4, reviews:936, img:'https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&auto=format&fit=crop&sig=48' },
+  { id:'d49', name:'Mixed Fruit Fiesta', cat:'fruity', price:830, oldPrice:980, badge:'badge-sale', badgeText:'Special', stars:5, reviews:953, img:'https://images.unsplash.com/photo-1514517220034-865fb7bdce9a?w=600&auto=format&fit=crop&sig=49' },
+  { id:'d50', name:'Glazed Party Box', cat:'classic', price:2999, badge:'badge-hit', badgeText:'Bestseller', stars:5, reviews:970, img:'https://images.unsplash.com/photo-1556913396-7a3c459ef68e?w=600&auto=format&fit=crop&sig=50' }
 ];
 const COFFEES = [
   { id:'c1', name:'Cappuccino',       price:549, temp:'🔥', desc:'Velvety espresso with silky steamed milk foam and a dusting of cocoa.', img:'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&auto=format&fit=crop' },
@@ -1631,6 +1762,19 @@ const ALL_ITEMS = [
 
 /* ── CART STATE ── */
 let cart = {};
+
+let ordersDB = JSON.parse(localStorage.getItem('bbd_orders') || '[]');
+let addedProducts = JSON.parse(localStorage.getItem('bbd_products') || '[]');
+let lastOrder = null;
+function saveOrders(){ localStorage.setItem('bbd_orders', JSON.stringify(ordersDB)); }
+function saveProducts(){ localStorage.setItem('bbd_products', JSON.stringify(addedProducts)); }
+function mergeAddedProducts(){
+  addedProducts.forEach(p=>{ if(!DONUTS.some(d=>d.id===p.id)) DONUTS.push(p); });
+}
+function money(n){ return 'PKR ' + Number(n||0).toLocaleString(); }
+function todayISO(){ return new Date().toISOString().slice(0,10); }
+function currentMonthISO(){ return new Date().toISOString().slice(0,7); }
+
 
 /* ── RENDER DONUTS ── */
 function starsHtml(n){ return [1,2,3,4,5].map(i=>`<span class="${i<=n?'star-filled':'star-empty'}">★</span>`).join(''); }
@@ -1758,13 +1902,41 @@ function updateCartUI(){
 
 /* ── PLACE ORDER ── */
 function placeOrder(){
-  const phone = document.getElementById('phone').value;
-  const address = document.getElementById('address').value;
-  if(!Object.keys(cart).length){ toast('🛒 Add items to your cart first!'); return; }
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const city = document.getElementById('city').value;
+  const zip = document.getElementById('zip').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+  const payment = document.querySelector('.pay-opt.sel')?.textContent.trim() || 'Cash';
+  const items = Object.values(cart);
+  if(!items.length){ toast('🛒 Add items to your cart first!'); return; }
   if(!phone || !address){ toast('📋 Please fill in your delivery details!'); return; }
+  const subtotal = items.reduce((a,i)=>a+i.price*i.qty,0);
+  const total = subtotal + 150 - 50;
+  lastOrder = {
+    id:'BBD-' + Date.now(),
+    date:new Date().toISOString(),
+    customer:`${fname} ${lname}`.trim() || 'Customer',
+    phone,address,city,zip,notes,payment,
+    items:items.map(i=>({id:i.id,name:i.name,price:i.price,qty:i.qty})),
+    subtotal,delivery:150,discount:50,total
+  };
+  ordersDB.unshift(lastOrder);
+  saveOrders();
   cart = {};
   updateCartUI();
+  renderAdmin();
   document.getElementById('order-success').classList.add('show');
+}
+function printOrderDetails(){
+  if(!lastOrder && ordersDB.length) lastOrder = ordersDB[0];
+  if(!lastOrder){ toast('No order available to print.'); return; }
+  const itemRows = lastOrder.items.map(i=>`<tr><td>${i.name}</td><td>${i.qty}</td><td>${money(i.price*i.qty)}</td></tr>`).join('');
+  const html = `<html><head><title>${lastOrder.id}</title><style>body{font-family:Arial;padding:28px;color:#222}h1{margin:0 0 8px}.box{border:1px solid #ddd;border-radius:12px;padding:18px;margin:14px 0}table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #eee;padding:8px;text-align:left}.total{font-size:20px;font-weight:700}</style></head><body><h1>🫐 Blue Berry Donut</h1><p><b>Order ID:</b> ${lastOrder.id}<br><b>Date:</b> ${new Date(lastOrder.date).toLocaleString()}</p><div class="box"><b>Customer:</b> ${lastOrder.customer}<br><b>Phone:</b> ${lastOrder.phone}<br><b>Address:</b> ${lastOrder.address}, ${lastOrder.city} ${lastOrder.zip||''}<br><b>Payment:</b> ${lastOrder.payment}<br><b>Notes:</b> ${lastOrder.notes||'-'}</div><table><thead><tr><th>Product</th><th>Qty</th><th>Total</th></tr></thead><tbody>${itemRows}</tbody></table><div class="box"><p>Subtotal: ${money(lastOrder.subtotal)}</p><p>Delivery: ${money(lastOrder.delivery)}</p><p>Discount: -${money(lastOrder.discount)}</p><p class="total">Grand Total: ${money(lastOrder.total)}</p></div></body></html>`;
+  const w = window.open('', '_blank');
+  w.document.write(html); w.document.close(); w.focus(); w.print();
 }
 function selPay(el){ document.querySelectorAll('.pay-opt').forEach(e=>e.classList.remove('sel')); el.classList.add('sel'); }
 
@@ -1874,6 +2046,49 @@ function toast(msg){
   toastTimer=setTimeout(()=>t&&t.remove(),2600);
 }
 
+
+/* ── ADMIN DATABASE ── */
+function renderAdmin(){
+  const dayEl=document.getElementById('adminDay'), monthEl=document.getElementById('adminMonth');
+  if(!dayEl) return;
+  if(!dayEl.value) dayEl.value=todayISO();
+  if(!monthEl.value) monthEl.value=currentMonthISO();
+  const day=dayEl.value, month=monthEl.value;
+  const todayOrders=ordersDB.filter(o=>o.date.slice(0,10)===day);
+  const monthOrders=ordersDB.filter(o=>o.date.slice(0,7)===month);
+  document.getElementById('adminTodayOrders').textContent=todayOrders.length;
+  document.getElementById('adminMonthOrders').textContent=monthOrders.length;
+  document.getElementById('adminMonthSales').textContent=money(monthOrders.reduce((a,o)=>a+o.total,0));
+  const rows = todayOrders.length ? todayOrders.map(o=>`<tr><td>${o.id}<br><small>${new Date(o.date).toLocaleTimeString()}</small></td><td>${o.customer}<br>${o.phone}<br>${o.address}, ${o.city}</td><td>${o.items.map(i=>`${i.name} x${i.qty}`).join('<br>')}</td><td><b>${money(o.total)}</b><br>${o.payment}</td><td><button class="admin-btn light" onclick="lastOrder=ordersDB.find(x=>x.id==='${o.id}');printOrderDetails()">Print</button></td></tr>`).join('') : '<tr><td colspan="5">No orders for selected day.</td></tr>';
+  document.getElementById('ordersTable').innerHTML=`<thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Action</th></tr></thead><tbody>${rows}</tbody>`;
+}
+function renderProductsAdmin(){
+  const t=document.getElementById('productsTable'); if(!t) return;
+  const last= DONUTS.slice(-12).reverse();
+  t.innerHTML='<thead><tr><th>Product</th><th>Category</th><th>Price</th></tr></thead><tbody>'+last.map(p=>`<tr><td>${p.name}</td><td>${p.cat}</td><td>${money(p.price)}</td></tr>`).join('')+'</tbody>';
+}
+function addNewProductFromAdmin(){
+  const name=document.getElementById('newPName').value.trim();
+  const cat=document.getElementById('newPCat').value;
+  const price=Number(document.getElementById('newPPrice').value);
+  const img=document.getElementById('newPImg').value.trim() || 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop';
+  if(!name || !price){ toast('Enter product name and price.'); return; }
+  const p={id:'custom-'+Date.now(),name,cat,price,badge:'badge-new',badgeText:'New',stars:5,reviews:0,img};
+  DONUTS.push(p); addedProducts.push(p); saveProducts();
+  renderDonuts(document.querySelector('.filter-pill.on')?.dataset.f || 'all'); renderProductsAdmin();
+  document.getElementById('newPName').value=''; document.getElementById('newPPrice').value=''; document.getElementById('newPImg').value='';
+  toast('✅ Product added to menu!');
+}
+function clearOrdersDB(){ if(confirm('Clear all saved orders?')){ ordersDB=[]; saveOrders(); renderAdmin(); toast('Orders database cleared.'); } }
+function resetAddedProducts(){ if(confirm('Remove products added from admin panel?')){ addedProducts=[]; saveProducts(); location.reload(); } }
+function printAdminReport(){
+  const month=document.getElementById('adminMonth')?.value || currentMonthISO();
+  const data=ordersDB.filter(o=>o.date.slice(0,7)===month);
+  const rows=data.map(o=>`<tr><td>${o.id}</td><td>${new Date(o.date).toLocaleString()}</td><td>${o.customer}</td><td>${o.items.map(i=>`${i.name} x${i.qty}`).join(', ')}</td><td>${money(o.total)}</td></tr>`).join('');
+  const html=`<html><head><title>Monthly Orders ${month}</title><style>body{font-family:Arial;padding:25px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8px;text-align:left}</style></head><body><h1>Blue Berry Donut - Orders Report</h1><h3>Month: ${month}</h3><p>Total Orders: ${data.length} | Sales: ${money(data.reduce((a,o)=>a+o.total,0))}</p><table><tr><th>ID</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th></tr>${rows}</table></body></html>`;
+  const w=window.open('', '_blank'); w.document.write(html); w.document.close(); w.focus(); w.print();
+}
+
 /* ── CONTACT / NEWSLETTER ── */
 function sendMsg(){ toast('💌 Message sent! We\'ll reply within 24 hours.'); }
 function subscribe(){ toast('🎉 Subscribed! Enjoy 15% off your first order!'); }
@@ -1894,11 +2109,14 @@ const activeObserver = new IntersectionObserver(entries=>{
 sections.forEach(s=>activeObserver.observe(s));
 
 /* ── INIT ── */
+mergeAddedProducts();
 renderDonuts();
 renderCoffees();
 renderRecipes();
 renderGallery();
 renderReviews();
+renderAdmin();
+renderProductsAdmin();
 reObserve();
 </script>
 </body>
